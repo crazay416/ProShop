@@ -1,5 +1,9 @@
+// Import the bootstrap inside the index.js to have the font
+// affect the whole application
+
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './bootstrap.min.css'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
