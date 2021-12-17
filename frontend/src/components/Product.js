@@ -1,7 +1,8 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
+import Rating from './Rating'
 
-export const Product = ({ product }) => {
+const Product = ({ product }) => {
     return (
         <Card className='my-3 p-3 rounded'>
             <a href={`/product/${product._id}`}>
@@ -13,9 +14,7 @@ export const Product = ({ product }) => {
                     <Card.Title as='div'><strong>{product.name}</strong></Card.Title>
                 </a>
                 <Card.Text as='div'>
-                    <div className='my-3'>
-                        {product.rating} from {product.numReviews} reviews
-                    </div>
+                    <Rating value={product.rating} text={`${product.numReviews} reviews`} />
                 </Card.Text>
 
                 <Card.Text as='h3'>
@@ -27,3 +26,6 @@ export const Product = ({ product }) => {
         </Card>
     )
 }
+
+
+export default Product;
